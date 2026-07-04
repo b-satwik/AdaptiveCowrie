@@ -26,3 +26,12 @@ _trial_temp
 .pydevproject
 .idea/
 .tox
+# Adaptive Cowrie
+*.db
+*.sqlite
+*.sqlite3
+
+.vscode/
+
+twistd.log
+debug_vfs.txt
