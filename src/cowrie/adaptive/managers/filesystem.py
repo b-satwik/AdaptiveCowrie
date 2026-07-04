@@ -41,8 +41,6 @@ class AdaptiveFilesystemManager:
         self._active_profile_id = val
 
     def start(self, arch: str, home: str):
-        with open("debug_vfs.txt", "a") as df:
-            df.write("=== AdaptiveFilesystemManager.start() called ===\n")
         log.msg("=== AdaptiveFilesystemManager.start() called ===")
         self.arch = arch
         self.home = home
