@@ -10,7 +10,7 @@ pathspec==0.12.1
 pipdeptree==2.24.0
 pre-commit==4.1.0
 pylint==3.3.3
-pyre-check==0.9.23
+pyre-check==0.9.25
 pyright==1.1.392.post0
 pytype==2024.1.24; platform_python_implementation=='CPython' and python_version<='3.9'
 pytype==2024.10.11; platform_python_implementation=='CPython' and python_version>='3.10'
