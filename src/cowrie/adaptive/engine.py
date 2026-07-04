@@ -20,8 +20,9 @@ class AdaptiveEngine:
             return
 
         self.db_path = CowrieConfig.get("adaptive", "database", fallback="var/lib/cowrie/adaptive_cowrie.db")
-        db_dir = os.path.dirname(self.db_path)
-        if db_dir and not os.path.exists(db_dir):
+        db_dir = os.path.dirname(os.path.abspath(self.db_path))
+
+        if db_dir:
             os.makedirs(db_dir, exist_ok=True)
 
         self.conn = sqlite3.connect(self.db_path)
