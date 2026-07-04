@@ -25,6 +25,7 @@ from cowrie.ssh import session as sshsession
 class CowrieUser(avatar.ConchUser):
     def __init__(self, username: bytes, server: server.CowrieServer) -> None:
         avatar.ConchUser.__init__(self)
+        log.msg("=== CowrieUser.__init__ called ===")
         self.username: str = username.decode("utf-8")
         self.server = server
 
