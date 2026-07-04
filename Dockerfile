@@ -41,9 +41,8 @@ RUN apk --no-cache -U upgrade && \
 # Install cowrie
     mkdir -p /home/cowrie && \
     cd /home/cowrie && \
-    git clone https://github.com/cowrie/cowrie && \
+    git clone https://github.com/b-satwik/AdaptiveCowrie.git cowrie && \
     cd cowrie && \
-    git checkout 7b18207485dbfc218082e82c615d948924429973 && \
     mkdir -p log && \
     # cp /root/dist/requirements.txt . && \
     pip3 install --break-system-packages --upgrade --no-cache-dir pip && \
