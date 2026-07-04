@@ -46,8 +46,9 @@ class SSHSessionForCowrieUser:
             self.environ["PATH"] = (
                 "/usr/local/bin:/usr/bin:/bin:/usr/local/games:/usr/games"
             )
-
+        log.msg("=== BEFORE initFileSystem ===")
         self.server.initFileSystem(self.avatar.home)
+        log.msg("=== AFTER initFileSystem ===")
 
         if self.avatar.temporary:
             self.server.fs.mkdir(self.avatar.home, self.uid, self.gid, 4096, 755)
